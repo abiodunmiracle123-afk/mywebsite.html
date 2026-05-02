@@ -16,26 +16,62 @@ header{
 }
 
 /* NAV */
-.content{
+/* MENU BAR */
+.menu-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
-  flex-wrap: wrap;
+  position: relative;
 }
 
-ul{
-  display: flex;
-  flex-wrap: wrap;
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-li{
+/* MENU */
+.menu {
   list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-a{
-  padding: 15px;
-  color: black;
+/* LINKS */
+.menu li a {
   text-decoration: none;
+  color: black;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: white;
+    padding: 20px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
 }
 
 /* SECTIONS */
